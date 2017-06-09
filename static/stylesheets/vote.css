@@ -1,0 +1,464 @@
+.pr {
+  position: relative; }
+
+.pa {
+  position: absolute; }
+
+.pf {
+  position: fixed; }
+
+.db {
+  display: block; }
+
+.di {
+  display: inline; }
+
+.dib {
+  display: inline-block; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.fn {
+  float: none; }
+
+.thin-grid {
+  margin: 2px; }
+
+.left-item {
+  margin-left: 0; }
+
+.right-item {
+  margin-right: 0; }
+
+@font-face {
+  font-family: 'MSYI';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/msyi.ttf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/MuseoSans_100.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: italic;
+  font-weight: 100;
+  src: url("../fonts/MuseoSans_100Italic.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/MuseoSans_300.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/MuseoSans_300Italic.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/MuseoSans_500.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/MuseoSans_500Italic.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/MuseoSans_700.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/MuseoSans_700Italic.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/MuseoSans900.otf"); }
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/MuseoSans_900Italic.otf"); }
+/*$font-stack:    'MuseoSans', 'MSYI', sans-serif;*/
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  color: #323232; }
+
+blockquote {
+  border-left: 2px solid #4ADEC2;
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 12.5px;
+  padding-left: 25px; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1 {
+  font-size: 50px;
+  font-style: normal;
+  margin: 0 0 25px; }
+
+h2 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 25px; }
+
+h3 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 25px; }
+
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 0 25px; }
+
+h5 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0 25px; }
+
+p {
+  margin: 0 0 12.5px; }
+
+pre {
+  background: #222;
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0 0 12.5px;
+  padding: 12.5px; }
+
+a {
+  color: #3b6caa;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  a:focus {
+    text-decoration: none; }
+  a:visited {
+    color: #734098; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+/* ----------------------------------------------------------------------------------------------------
+Super Form Reset
+A couple of things to watch out for:
+- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
+- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
+- You NEED to set the font-size and family on all form elements
+- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
+- You can style the upload button in webkit using ::-webkit-file-upload-button
+- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
+- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
+- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
+----------------------------------------------------------------------------------------------------*/
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial; }
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0; }
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+/*
+input,
+textarea
+{
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+*/
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px; }
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box; }
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none; }
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto; }
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none; }
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto; }
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top; }
+
+/*THIS WAS ADDED AND NOT COPIED FROM SOMEWHERE. THIS IS NOT THE BEST SOLUTION FOR PHONES BUT WORKED.*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden; } }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+nav.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #e5e5e5; }
+  nav.navbar .container {
+    padding: 0px 20px; }
+    nav.navbar .container .logo {
+      position: absolute;
+      height: 100%; }
+      nav.navbar .container .logo img {
+        height: 100%;
+        padding: 10px 5px;
+        position: relative; }
+    nav.navbar .container ul {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      text-align: right; }
+      nav.navbar .container ul li {
+        display: inline-block; }
+        nav.navbar .container ul li .nav-link {
+          position: relative;
+          padding: 0px 10px;
+          text-decoration: none;
+          font-size: 14px;
+          display: block;
+          line-height: 60px;
+          color: #323232;
+          margin-top: 6px; }
+          nav.navbar .container ul li .nav-link:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0px;
+            bottom: 0;
+            left: 0;
+            background: #3b6caa;
+            -webkit-transition: height 0.3s ease-in;
+            -moz-transition: height 0.3s ease-in;
+            transition: height 0.3s ease-in; }
+          nav.navbar .container ul li .nav-link:hover:after {
+            height: 4px;
+            color: white; }
+
+footer.footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  background-color: #f5f5f5;
+  padding: 40px 5%; }
+  footer.footer .white-label-logo {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    max-width: 200px;
+    vertical-align: middle; }
+    footer.footer .white-label-logo img {
+      position: relative;
+      width: 100%; }
+  footer.footer .footer-text {
+    position: relative;
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #323232;
+    font-weight: 500; }
+    footer.footer .footer-text span.rittal {
+      color: #ed0577;
+      font-family: 'Open Sans', 'Droid Sans', Arial, sans-serif; }
+  footer.footer .Rittal-logo {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    max-width: 100px;
+    vertical-align: middle; }
+    footer.footer .Rittal-logo img {
+      position: relative;
+      width: 100%; }
+
+.page-container {
+  position: relative;
+  width: 100%;
+  padding: 20px 5%;
+  text-align: center;
+  font-size: 0; }
+  .page-container h1.title {
+    position: relative;
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 40px; }
+  .page-container .voting-container {
+    position: relative;
+    width: 90%;
+    display: inline-block;
+    font-size: 0; }
+    .page-container .voting-container .option-container {
+      position: relative;
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 20px 50px;
+      width: 50%; }
+      .page-container .voting-container .option-container .option-img-container {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 10px auto; }
+        .page-container .voting-container .option-container .option-img-container img {
+          position: relative;
+          width: 100%; }
+      .page-container .voting-container .option-container .option-title {
+        position: relative;
+        text-align: center;
+        font-size: 22px;
+        line-height: 2; }
+      .page-container .voting-container .option-container .button-container {
+        position: relative;
+        width: 100%;
+        text-align: center; }
+        .page-container .voting-container .option-container .button-container input {
+          width: calc(50% - 2px);
+          font-size: 16px;
+          padding: 15px 0px;
+          margin: 10px 1px;
+          -webkit-appearance: none;
+          color: #4178be;
+          border: 2px solid #4178be;
+          cursor: pointer;
+          -webkit-transition: background-color 0.3s, color 0.3s;
+          -moz-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s; }
+          .page-container .voting-container .option-container .button-container input:hover {
+            background: #4178be;
+            color: white; }
+    .page-container .voting-container .or-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 20px; }
+  .page-container .footer-links {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    line-height: 2; }
+
+/*# sourceMappingURL=vote.css.map */

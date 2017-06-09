@@ -1,0 +1,88 @@
+//
+//   Created 6-13-16 by Stuart Casarotto
+//
+//   This document will hold all NavBar code.
+//
+//
+//   To Do:
+//
+//
+//
+//
+//********************//
+//*	   VARIABLES     *//
+//********************//
+
+
+//***************//
+//*	    CODE    *//
+//***************//
+nav.navbar{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;	
+	width: 100%;
+	z-index: 100;
+	background-color: white;
+	font-family: $font-stack;
+	border-bottom: 1px solid #e5e5e5;
+	    
+	//NEST
+	.container{
+		padding: 0px 20px;
+		
+		//NEST
+		.logo {
+		    position: absolute;
+		    height: 100%;
+		    
+		    //NEST
+		    img {
+			    height: 100%;
+			    padding: 10px 5px;
+			    position: relative;
+			}
+		}		
+		ul{
+			position: relative;
+			list-style: none;
+			margin: 0;
+			text-align: right;
+
+			//NEST
+			li{
+			    display: inline-block;
+
+				//NEST
+				.nav-link{
+					position: relative;
+					padding: 0px 10px;
+					text-decoration: none;
+					font-size: 14px;
+					display: block;
+					line-height: 60px;
+					color: #323232;
+					margin-top: 6px;
+				    
+					//NEST
+					&:after {
+						position: absolute;
+					    content: '';
+					    display: block;
+					    width: 100%;
+					    height: 0px;
+					    bottom: 0;
+					    left: 0;
+					    background: #3b6caa;
+					    @include transition(height .3s ease-in)
+					}
+					&:hover:after {
+					    height: 4px;
+					    color: white;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+//
+//   Created by Stuart Casarotto
+//
+//   This document will hold all my Configs Page code.
+//
+//
+//   To Do:
+//
+//
+//
+
+//Modules
+@import "main";
+
+
+.page-container{
+	position: relative;
+	width: 100%;
+	padding: 20px 5%;
+	text-align: center;
+	font-size: 0;
+	
+	//NEST
+	h1.title{
+		position: relative;
+		width: 100%;
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	h4{
+	    position: relative;
+	    width: 80%;
+	    margin: 10px auto;
+	    line-height: 1.5;
+	    max-width: 800px;
+	    font-weight: 300;
+	}
+	table.topic-table{
+		position: relative;
+		display: inline-block;
+		border-collapse: collapse;
+		border: none;
+
+		
+		//NEST
+		.topic-container{
+			position: relative;
+			width: 300px;
+			padding: 20px;
+
+			//NEST
+			.topic-img-container{
+				position: relative;
+				display: block;
+				width: 100%;
+				
+				//NEST
+				img{
+					position: relative;
+					width: 100%;
+				}
+			}
+			.topic-title{
+				position: relative;
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 22px;
+				line-height: 2;
+			
+			}
+			.topic-button-container{
+				position: relative;
+				display: block;
+				width: 100%;
+				font-size: 0px;
+									
+				//NEST
+				input {
+					width: calc(50% - 2px);
+					font-size: 16px;
+					padding: 15px 0px;
+					margin: 10px 1px;
+					-webkit-appearance: none;
+					color: #4178be;
+					border: 2px solid #4178be;
+					cursor: pointer;
+		
+		
+					@include transition(background-color 0.3s, color 0.3s);
+				    
+				    &:hover {
+						background: #4178be;
+					    color: white;			
+					}
+		
+					&:focus {
+					
+					}
+				}
+			}
+
+		}
+	}
+}
+

@@ -1,0 +1,64 @@
+//
+//   Created by Stuart Casarotto
+//
+//   This document will hold all my Configs Page code.
+//
+//
+//   To Do:
+//
+//
+//
+
+//Modules
+@import "main";
+
+
+.page-container{
+	position: relative;
+	width: 100%;
+	padding: 20px 5%;
+	text-align: center;
+	font-size: 0;
+	
+	//NEST
+	h1.title{
+		position: relative;
+		width: 100%;
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.footer-links {
+	    position: relative;
+	    text-align: center;
+	    font-size: 22px;
+	    line-height: 2;
+	}
+
+}
+svg.bubble {
+    position: relative;
+    margin: 20px auto;
+    display: block;
+}
+
+div#tooltip {
+    position: absolute;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 1px gray;
+    padding: 20px;
+    
+    &.hidden{
+    	display: none;
+    }
+    
+    //NEST
+    img{
+	    position: relative;
+	    width: 100%;
+	    
+    }
+}

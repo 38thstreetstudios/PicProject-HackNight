@@ -1,0 +1,55 @@
+//	
+//	 Created 6-13-16 by Stuart Casarotto
+//	 
+//	 This document will hold all base position declarations to be used through the website.
+//	 
+//	 This document will include:
+//	 	- Basic Position Classes
+//	 	- Default Position Variables
+//	
+//	
+//	
+//********************//
+//*	   VARIABLES     *//
+//********************//
+$padding : 25px;
+
+$thinGutter: 2px;
+
+$borderRadius: 20px;
+
+//********************//
+//*	   FUNCTIONS     *//
+//********************//
+@mixin box-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+//******************//
+//*	   CLASSES     *//
+//******************//
+//Position
+.pr{position: relative;}
+.pa{position: absolute;}
+.pf{position: fixed;}
+
+//Display
+.db{display: block;}
+.di{display: inline;}
+.dib{display: inline-block;}
+
+//Float
+.fr{float: right;}
+.fl{float: left;}
+.fn{float: none;}
+
+
+//////////
+//Unique//
+//////////
+.thin-grid{margin: $thinGutter}
+.left-item{margin-left:0;}
+.right-item{margin-right:0;}

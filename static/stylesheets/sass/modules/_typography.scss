@@ -1,0 +1,207 @@
+//
+//	Created 6-13-16 by Stuart Casarotto
+//	
+//	This document will hold all font declarations to be used through the website.
+//	
+//	This document will include:
+//		- Font Imports
+//		- Font Variables (size, weight, and font)
+//		- Font Classes (h1 h2 ..., letterspacing, lineheight) 
+//	
+//	
+//	To Do:
+//		- Import all fonts
+//		- Define base variables
+//		- Define base classes
+//		- H1 - H6 Styles
+//	
+//	
+
+//******************//
+//*	   IMPORTS     *//
+//******************//
+//MICROSOFT YI BAITI
+@font-face {
+	font-family: 			'MSYI';
+	font-style: 			normal;
+	font-weight: 			normal;
+	src: 					url('../fonts/msyi.ttf');
+}
+
+//MUSEO SANS
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			normal;
+	font-weight: 			100;
+	src: 					url('../fonts/MuseoSans_100.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			italic;
+	font-weight: 			100;
+	src: 					url('../fonts/MuseoSans_100Italic.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			normal;
+	font-weight: 			300;
+	src: 					url('../fonts/MuseoSans_300.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			italic;
+	font-weight: 			300;
+	src: 					url('../fonts/MuseoSans_300Italic.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			normal;
+	font-weight: 			500;
+	src: 					url('../fonts/MuseoSans_500.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			italic;
+	font-weight: 			500;
+	src: 					url('../fonts/MuseoSans_500Italic.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			normal;
+	font-weight: 			700;
+	src: 					url('../fonts/MuseoSans_700.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			italic;
+	font-weight: 			700;
+	src: 					url('../fonts/MuseoSans_700Italic.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			normal;
+	font-weight: 			900;
+	src: 					url('../fonts/MuseoSans900.otf');
+}
+@font-face {
+	font-family: 			'MuseoSans';
+	font-style: 			italic;
+	font-weight: 			900;
+	src: 					url('../fonts/MuseoSans_900Italic.otf');
+}
+
+//*********************//
+//*	   VARIABLES      *//
+//*********************//
+/*$font-stack:    'MuseoSans', 'MSYI', sans-serif;*/
+$font-stack:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//*******************//
+//*	   CLASSES      *//
+//*******************//
+//
+// NOTES: Use em for things that scale based on font size. Use REM for fonts and things that should scale on browser font size.
+//		-- LOOK INTOHOW TO USE THIS CORRECTLY AGAIN
+//
+//
+//rem and em units are computed into pixel values by the browser, based on font sizes in your design.
+//em units are based on the font size of the element they’re used on.
+//rem units are based on the font size of the html element.
+//em units can be influenced by font size inheritance from any parent element
+//rem units can be influenced by font size inheritance from browser font settings.
+//
+//Use em units for sizing that should scale depending on the font size of an element other than the root.
+//Use rem units for sizing that doesn’t need em units, and that should scale depending on browser font size settings.
+//Use rem units unless you’re sure you need em units, including on font sizes.
+//Use rem units on media queries
+//Don’t use em or rem in multi column layout widths - use % instead.
+//Don’t use em or rem if scaling would unavoidably cause a layout element to break.
+//
+html, body {
+  font-family: $font-stack;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  color: $primaryGray;
+}
+
+blockquote {
+  border-left: 2px solid $primaryGreen;
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 $padding/2;
+  padding-left: $padding;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-stack;
+}
+
+h1 {
+  font-size: 50px;
+  font-style: normal;
+  margin: 0 0 $padding;
+}
+
+h2 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 $padding;
+}
+
+h3 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 $padding;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 0 $padding;
+}
+
+h5 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0 $padding;
+}
+
+p {
+  margin: 0 0 $padding/2;
+}
+
+pre {
+  background: #222;
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0 0 $padding/2;
+  padding: $padding/2;
+}
+
+a {
+	color: #3b6caa;
+	text-decoration: none;
+	
+	&:hover{
+		text-decoration: underline;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+	&:visited{
+		color: #734098;  
+	}
+}

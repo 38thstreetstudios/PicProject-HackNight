@@ -1,0 +1,73 @@
+//	
+//	 Created 6-13-16 by Stuart Casarotto
+//	 
+//	 This document will hold all color declarations to be used through the website.
+//	 
+//	 This document will include:
+//	 	- Color Variables
+//	
+//	
+//*****************//
+//*	   COLORS     *//
+//*****************//
+$primaryGreen		: 	#4ADEC2;
+$primaryBlue		: 	#007CC3;
+$primaryGray		: 	#323232;
+$primaryWhite		:	white;
+
+//********************//
+//*	   FUNCTIONS     *//
+//********************//
+
+//
+// INPUT:
+//		- color1: color
+//		- color2: color
+//		- percent: decimal percentage
+//
+// RETURN:
+//		- color
+//
+// COMMENT: This is used to find a color between two colors.
+//
+// TODO: 
+//		- Check for $percent as a % and convert to a decimal
+//		- Check for $percent being 0-1 and break or error
+//
+
+@function colorBetweenColors($color1, $color2, $percent) {
+	//CHECKS
+	@if unit($percent) == \%{ 
+		@debug got here;
+		$percent: $percent/100%; 
+	}//this doenst seem to be working
+
+	//INITIALIZE
+	$color1r: red($color1);
+	$color1g: green($color1);
+	$color1b: blue($color1);
+	$color1a: alpha($color1);
+
+	$color2r: red($color2);
+	$color2g: green($color2);
+	$color2b: blue($color2);
+	$color2a: alpha($color2);
+
+	//MATH
+	$colorrdif: $color2r - $color1r;
+	$colorgdif: $color2g - $color1g;
+	$colorbdif: $color2b - $color1b;
+	$coloradif: $color2a - $color1a;
+	
+	$colorrpdif: $colorrdif * $percent;
+	$colorgpdif: $colorgdif * $percent;
+	$colorbpdif: $colorbdif * $percent;
+	$colorapdif: $coloradif * $percent;
+	
+	$colorr: $color1r + $colorrpdif;
+	$colorg: $color1g + $colorgpdif;
+	$colorb: $color1b + $colorbpdif;
+	$colora: $color1a + $colorapdif;
+
+	@return rgba($colorr, $colorg, $colorb, $colora);
+}
